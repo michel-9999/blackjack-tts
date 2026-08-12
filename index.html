@@ -32,7 +32,12 @@
     button.playing { color:#17120a; background:var(--gold); }
     .play { font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; opacity:.8; }
     #status { min-height:1.5em; margin:1.5rem 0 0; text-align:center; color:var(--muted); font-size:.9rem; }
-    footer { padding:2rem 0 0; text-align:center; color:#817c71; font-size:.78rem; }
+    footer { max-width:48rem; margin:3rem auto 0; padding:2rem 0 0; border-top:1px solid #ffffff1f;
+      color:#9d978a; font-size:.82rem; line-height:1.6; }
+    footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 { margin:0 0 .75rem; color:var(--muted);
+      font-family:Georgia,serif; font-size:1.15rem; }
+    footer p { margin:.65rem 0; }
+    footer a { color:var(--gold); }
     @media (prefers-reduced-motion:reduce) { * { transition:none!important; } }
   </style>
 </head>
@@ -43,7 +48,9 @@
     <nav id="filters" class="filters" aria-label="Filter voices"></nav>
     <section id="voices" aria-label="Available voices"></section>
     <p id="status" aria-live="polite">Select a category to hear a sample.</p>
-    <footer>Static showcase generated from the audio library.</footer>
+    <footer aria-label="Disclaimer"><h1>Disclaimer</h1>
+<p>The voice lines featured in this showcase were generated using <strong>Kokoro</strong>, an open-weight text-to-speech model. Kokoro’s model weights are released under the permissive <strong>Apache 2.0 license</strong>, allowing use in both personal and commercial projects, including commercially sold games.</p>
+<p>All dialogue used here was written specifically for this project and generated locally using Kokoro’s built-in voices.</p></footer>
   </main>
   <audio id="player" preload="none"></audio>
   <script>
